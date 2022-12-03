@@ -4,5 +4,5 @@
 void main() {
     clear_screen();
 	
-    kprint_at("Welcome to cosmOS", 32, 1);
+    kprint_at("Welcome to Peanut OS", 32, 1);
 }
