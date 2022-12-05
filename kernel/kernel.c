@@ -1,8 +1,13 @@
-#include "../drivers/screen.h"
-#include "util.h"
+#include "../cpu/isr.h"
+#include "../cpu/timer.h"
+#include "../drivers/keyboard.h"
 
 void main() {
-    clear_screen();
-	
-    kprint_at("Welcome to Peanut OS", 32, 1);
+    isr_install();
+
+    asm volatile("sti");
+    init_timer(50);
+    /* Comment out the timer IRQ handler to read
+     * the keyboard IRQs easier */
+    init_keyboard();
 }
