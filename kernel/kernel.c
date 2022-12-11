@@ -1,13 +1,45 @@
 #include "../cpu/isr.h"
-#include "../cpu/timer.h"
-#include "../drivers/keyboard.h"
+#include "../drivers/screen.h"
+#include "kernel.h"
+#include "../libc/string.h"
+#include "../libc/mem.h"
+#include <stdint.h>
 
-void main() {
-    isr_install();
+void kernel_main() {
+	clear_screen();
+    
+	isr_install();
+    irq_install();
 
-    asm volatile("sti");
-    init_timer(50);
-    /* Comment out the timer IRQ handler to read
-     * the keyboard IRQs easier */
-    init_keyboard();
+    asm("int $2");
+    asm("int $3");
+
+    kprint("Welcome To Peanut OS \n> ");
+}
+
+void user_input(char *input) {
+    if (strcmp(input, "END") == 0) {
+        kprint("Stopping the CPU. Bye!\n");
+        asm volatile("hlt");
+    } else if (strcmp(input, "PAGE") == 0) {
+        /* Lesson 22: Code to test kmalloc, the rest is unchanged */
+        uint32_t phys_addr;
+        uint32_t page = kmalloc(1000, 1, &phys_addr);
+        char page_str[16] = "";
+        hex_to_ascii(page, page_str);
+        char phys_str[16] = "";
+        hex_to_ascii(phys_addr, phys_str);
+        kprint("Page: ");
+        kprint(page_str);
+        kprint(", physical address: ");
+        kprint(phys_str);
+    }
+    else if (strcmp(input, "INFO") == 0) {
+	kprint("cosmOS\nVersion 0.0\nWritten by James Park"); 		
+	}
+    else {
+    	kprint("You said: ");
+    	kprint(input);
+}    
+kprint("\n> ");
 }
