@@ -18,10 +18,10 @@ void kernel_main() {
 }
 
 void user_input(char *input) {
-    if (strcmp(input, "END") == 0) {
+    if (strcmp(input, "end") == 0) {
         kprint("Stopping the CPU. Bye!\n");
         asm volatile("hlt");
-    } else if (strcmp(input, "PAGE") == 0) {
+    } else if (strcmp(input, "page") == 0) {
         /* Lesson 22: Code to test kmalloc, the rest is unchanged */
         uint32_t phys_addr;
         uint32_t page = kmalloc(1000, 1, &phys_addr);
@@ -34,8 +34,8 @@ void user_input(char *input) {
         kprint(", physical address: ");
         kprint(phys_str);
     }
-    else if (strcmp(input, "INFO") == 0) {
-	kprint("cosmOS\nVersion 0.0\nWritten by James Park"); 		
+    else if (strcmp(input, "info") == 0) {
+	kprint("Peanut OS\nVersion 0.0\nWritten by James Park"); 		
 	}
     else {
     	kprint("You said: ");
