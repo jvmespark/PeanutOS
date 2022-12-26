@@ -10,7 +10,7 @@ A Peanut sized Operating System.
 
 ## Installation
 
-Note: Make sure you have a GCC cross compiler installed. 
+Note: Make sure you have a GCC cross compiler installed.  
 clone the repo
 ```bash
     git clone https://github.com/d0ngeun/Peanut-OS.git
