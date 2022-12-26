@@ -3,30 +3,20 @@
 
 A Peanut sized Operating System.
 
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
 
 ## Roadmap
 
 - File System
 
-
-## Lessons Learned
-
-What did you learn while building this project? What challenges did you face and how did you overcome them?
-
-
 ## Installation
 
-Install my-project with npm
-
+Note: Make sure you have a GCC cross compiler installed. 
+clone the repo
 ```bash
-  npm install my-project
-  cd my-project
+    git clone https://github.com/d0ngeun/Peanut-OS.git
+    make run
 ```
-    
+
 ## Acknowledgements
 
  - https://dev.to/frosnerd/series/9585
