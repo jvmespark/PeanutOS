@@ -1,12 +1,22 @@
 
 # Peanut OS
 
-A Peanut sized Operating System.
+# Features
 
+- Bootloader
+- Video graphics driver
+- Keyboard driver
+- Alphanumeric support
+- CPU emulation
+- Kernel
+- Memory manager
 
 ## Roadmap
 
 - File System
+- Bitmap GUI
+- Networking
+- BIOS 
 
 ## Installation
 
