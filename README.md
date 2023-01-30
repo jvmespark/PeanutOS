@@ -13,8 +13,9 @@
 
 ## Roadmap
 
+- Desktop GUI
+- Migrate from 32 to 64 bit
 - File System
-- Bitmap GUI
 - Networking
 - BIOS 
 

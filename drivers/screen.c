@@ -33,7 +33,7 @@ void kprint_at(char *message, int col, int row) {
     /* Loop through message and print it */
     int i = 0;
     while (message[i] != 0) {
-        offset = print_char(message[i++], col, row, WHITE_ON_BLACK);
+        offset = print_char(message[i++], col, row, LIGHTBLUE_ON_WHITE);
         /* Compute row/col for next iteration */
         row = get_offset_row(offset);
         col = get_offset_col(offset);
@@ -48,7 +48,7 @@ void kprint_backspace() {
     int offset = get_cursor_offset()-2;
     int row = get_offset_row(offset);
     int col = get_offset_col(offset);
-    print_char(0x08, col, row, WHITE_ON_BLACK);
+    print_char(0x08, col, row, LIGHTBLUE_ON_WHITE);
 }
 
 
@@ -67,12 +67,12 @@ void kprint_backspace() {
  */
 int print_char(char c, int col, int row, char attr) {
     uint8_t *vidmem = (uint8_t*) VIDEO_ADDRESS;
-    if (!attr) attr = WHITE_ON_BLACK;
+    if (!attr) attr = LIGHTBLUE_ON_WHITE;
 
     /* Error control: print a red 'E' if the coords aren't right */
     if (col >= MAX_COLS || row >= MAX_ROWS) {
         vidmem[2*(MAX_COLS)*(MAX_ROWS)-2] = 'E';
-        vidmem[2*(MAX_COLS)*(MAX_ROWS)-1] = RED_ON_WHITE;
+        vidmem[2*(MAX_COLS)*(MAX_ROWS)-1] = LIGHTBLUE_ON_WHITE;
         return get_offset(col, row);
     }
 
@@ -139,7 +139,7 @@ void clear_screen() {
 
     for (i = 0; i < screen_size; i++) {
         screen[i*2] = ' ';
-        screen[i*2+1] = WHITE_ON_BLACK;
+        screen[i*2+1] = LIGHTBLUE_ON_WHITE;
     }
     set_cursor_offset(get_offset(0, 0));
 }

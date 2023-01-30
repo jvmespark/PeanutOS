@@ -3,12 +3,13 @@
 #include "kernel.h"
 #include "../libc/string.h"
 #include "../libc/mem.h"
+
 #include <stdint.h>
 
 void kernel_main() {
-	clear_screen();
+    clear_screen();
     
-	isr_install();
+    isr_install();
     irq_install();
 
     asm("int $2");
@@ -38,8 +39,7 @@ void user_input(char *input) {
 	kprint("Peanut OS\nVersion 0.0\nWritten by James Park"); 		
 	}
     else {
-    	kprint("You said: ");
     	kprint(input);
-}    
+    }    
 kprint("\n> ");
 }
