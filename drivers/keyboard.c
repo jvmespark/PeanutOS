@@ -2,8 +2,8 @@
 #include "../cpu/ports.h"
 #include "../cpu/isr.h"
 #include "screen.h"
-#include "../libc/string.h"
-#include "../libc/function.h"
+#include "../user/libc/string.h"
+#include "../user/libc/function.h"
 #include "../kernel/kernel.h"
 #include <stdint.h>
 

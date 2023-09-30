@@ -75,3 +75,26 @@ int strcmp(char s1[], char s2[]) {
     }
     return s1[i] - s2[i];
 }
+
+char* strtok(char* str, char stop) {
+    int i;
+    char* returnStr = "";
+    for (i = 0; i < strlen(str); i++) {
+        if (str[i] == stop) {
+            break;
+        }
+        append(returnStr, str[i]);
+    }
+    return returnStr;
+}
+
+char* splitStr(char* str, int breakPoint) {
+    //int i;
+    //char* asd = "";
+    //for (i = 0; i < strlen(str); i++) {
+        //if (i >= breakPoint) {
+      //      append(returnStr, str[i]);
+        //}
+    //}
+    return "asd";
+}
