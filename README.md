@@ -11,13 +11,13 @@ A Peanut sized (monolithic kernel) Operating System (for the x86 architecture)
 
 ## Roadmap
 
--[ ] migrate from 32 to 64 bit
-	-[ ] reimplement bootloader to enter long mode and use paging
-	-[ ] support multiboot mode, switch from BIOS to UEMFI
-	-[ ] extend kernel for panic mode and more meta commands
--[ ] a file System
--[ ] network drivers 
--[ ] populate with ports of games, apps, dev tools, etc
+- [ ] migrate from 32 to 64 bit
+	- [ ] reimplement bootloader to enter long mode and use paging
+	- [ ] support multiboot mode, switch from BIOS to UEMFI
+	- [ ] extend kernel for panic mode and more meta commands
+- [ ] a file System
+- [ ] network drivers 
+- [ ] populate with ports of games, apps, dev tools, etc
 
 ## Usage
 
