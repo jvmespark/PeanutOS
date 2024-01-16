@@ -1,5 +1,5 @@
 # Peanut OS
-a monolithic kernel operating system for the x86 computer architecture
+A Peanut sized (monolithic kernel) Operating System (for the x86 architecture)  
 
 # Features
 
@@ -18,17 +18,13 @@ a monolithic kernel operating system for the x86 computer architecture
 - a file System
 - network drivers 
 
-## Installation
+## Usage
 
-Note: Make sure you have a GCC cross compiler installed.  
-clone the repo
-```bash
-    git clone https://github.com/jvmespark/Peanut-OS.git
-    make run
-```
+First make sure you have a GCC cross compiler installed (confusing)  
+Then clone the repo and then just "make run"! (simple)  
 
 ## Resources
-
+If you want to learn more about osdev:
  - https://dev.to/frosnerd/series/9585
  - https://github.com/cfenollosa/os-tutorial
  - https://github.com/Stichting-MINIX-Research-Foundation/minix/tree/master/minix
