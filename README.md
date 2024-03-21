@@ -30,4 +30,6 @@ If you want to learn more about osdev:
  - https://github.com/cfenollosa/os-tutorial
  - https://github.com/Stichting-MINIX-Research-Foundation/minix/tree/master/minix
  - https://wiki.osdev.org
- - https://www.youtube.com/watch?v=1rnA6wpF0o4&list=PLHh55M_Kq4OApWScZyPl5HhgsTJS9MZ6M
+ - https://www.youtube.com/@writeyourownoperatingsystem/videos
+ - https://pages.cs.wisc.edu/~remzi/OSTEP/
+ - https://github.com/mit-pdos/xv6-riscv
