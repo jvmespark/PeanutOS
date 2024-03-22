@@ -2,7 +2,7 @@
 #include "idt.h"
 #include "../drivers/screen.h"
 #include "../drivers/keyboard.h"
-#include "../user/libc/string.h"
+#include "../libc/string.h"
 #include "timer.h"
 #include "ports.h"
 

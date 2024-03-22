@@ -5,3 +5,6 @@
 *.bin
 *.o
 *.elf
+*.vscode
+
+todo.txt

@@ -1,6 +1,6 @@
 {
     "files.associations": {
         "*.embeddedhtml": "html",
-        "ports.h": "c"
+        "screen.h": "c"
     }
 }
